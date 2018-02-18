@@ -1,0 +1,18 @@
+{
+  "name": "spyrics",
+  "version": "0.1.0",
+  "description": "Lyrics for spotify",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ".\\node_modules\\.bin\\electron .",
+    "package-win": "electron-packager . spyrics --overwrite --platform=win32 --arch=ia32 --icon=C:/Users/Jak/Documents/Projects/Spyrics/icon.ico"  
+  },
+  "author": "Xycaan",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.7.10",
+    "htmlparser2": "^3.9.2",
+    "node-spotify-helper": "^0.4.7"
+  }
+}

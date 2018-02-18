@@ -1,0 +1,11 @@
+#lyrics{
+    white-space: pre-wrap;
+    font-family: 'Open Sans', cursive;
+    color: #CCCCCC;
+    text-align: center;
+}
+
+html{
+    background-color: #444444;
+    -webkit-app-region: drag;
+}

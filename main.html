@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Spyrics</title>
+    <script>
+        //Renderering script, small enough to be put inline
+        var ipc = require('electron').ipcRenderer //send/recieve messages from main process
+
+        ipc.on('lyrics', function(event, lyrics){ //When lyrics are recieved update the html
+            document.getElementById("lyrics").innerHTML=lyrics
+        })
+
+        setInterval(function(){ //Ask if lyrics need to be updated every 5 seconds.
+            console.log("Asking for lyrics refresh")
+            ipc.send('lyrics')
+        }, 5000)
+
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id='lyrics'><b>Starting up may take a little bit...</b></div>
+  </body>
+</html>
