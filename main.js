@@ -24,8 +24,8 @@ function createWindow() {
         win = null;
     })
 
-    app.on('window-all-closed', () => {
-        app.quit()
+    e.app.on('window-all-closed', () => {
+        e.app.quit()
     })
 
     lyricParser = new htmlparser.Parser({  //Object to get the lyrics text from html data
